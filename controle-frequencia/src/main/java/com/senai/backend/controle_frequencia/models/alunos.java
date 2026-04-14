@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "alunos") 
-public class alunos {
+public class Alunos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +26,10 @@ public class alunos {
     @Column(unique = true)
     private String email;
 
-    public alunos() {
+    public Alunos() {
     }
 
-    public alunos(Long id, String nome, Date dataNascimento, String email) {
+    public Alunos(Long id, String nome, Date dataNascimento, String email) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
