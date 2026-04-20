@@ -11,11 +11,11 @@ import java.util.Date;
 
 @Entity
 @Table(name = "alunos") 
-public class Alunos {
+public class Aluno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
     private String nome;
@@ -26,18 +26,18 @@ public class Alunos {
     @Column(unique = true)
     private String email;
 
-    public Alunos() {
+    public Aluno() {
     }
 
-    public Alunos(Long id, String nome, Date dataNascimento, String email) {
+    public Aluno(Integer id, String nome, Date dataNascimento, String email) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.email = email;
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
 
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
